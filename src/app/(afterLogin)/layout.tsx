@@ -1,3 +1,4 @@
+import { ReactNode } from "react";
 import style from "@/app/(afterLogin)/layout.module.css";
 import Image from "next/image";
 import Link from "next/link";
@@ -7,15 +8,16 @@ import LogoutButton from "./_component/LogoutButton";
 import TrendSection from "./_component/TrendSection";
 import FollowRecommend from "./_component/FollowRecommend";
 
-export default function AfterLoginLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+type Props = {
+  children: ReactNode;
+  modal: ReactNode;
+};
+
+export default function AfterLoginLayout({ children, modal }: Props) {
   return (
-    <section className={style.container}>
+    <main className={style.container}>
       <header className={style.leftSectionWrapper}>
-        <section className={style.leftSection}>
+        <div className={style.leftSection}>
           <div className={style.leftSectionFixed}>
             <Link className={style.logo} href="/">
               <div className={style.logoPill}>
@@ -32,7 +34,7 @@ export default function AfterLoginLayout({
             </nav>
             <LogoutButton />
           </div>
-        </section>
+        </div>
       </header>
       <div className={style.rightSectionWrapper}>
         <div className={style.rightSectionInner}>
@@ -58,6 +60,7 @@ export default function AfterLoginLayout({
           </section>
         </div>
       </div>
-    </section>
+      {modal}
+    </main>
   );
 }
