@@ -17,8 +17,8 @@ export default function LogoutButton() {
           src={me.image}
           alt={me.id}
           objectFit="cover"
-          width={50}
-          height={50}
+          width={40}
+          height={40}
         />
       </div>
       <div className={style.logOutUserName}>

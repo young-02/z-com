@@ -1,12 +1,21 @@
-import Image from "next/image";
-import Link from "next/link";
-import zLogo from "/public/zlogo.png";
-import styles from "@/app/page.module.css";
-
+import Post from "../_component/Post";
+import style from "./Home.module.css";
+import PostForm from "./_component/PostForm";
+import Tab from "./_component/Tab";
+import TabProvider from "./_component/TabProvider";
 export default function Home() {
   return (
     <>
-      <div className={styles.left}></div>
+      <main className={style.main}>
+        <TabProvider>
+          <Tab />
+          <PostForm />
+          {/* <Post />
+          <Post />
+          <Post />
+          <Post /> */}
+        </TabProvider>
+      </main>
     </>
   );
 }
