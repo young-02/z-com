@@ -19,9 +19,7 @@ export default function Tab() {
         </div>
         <div onClick={onClickFol}>
           팔로우 중
-          <div className={style.tabIndicator} hidden={tab === "rec"}>
-            dkfd
-          </div>
+          <div className={style.tabIndicator} hidden={tab === "rec"}></div>
         </div>
       </div>
     </div>
