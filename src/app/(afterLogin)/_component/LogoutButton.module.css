@@ -10,9 +10,9 @@
   background-color: #fff;
   text-align: left;
 }
-/* .logOutUserName {
+.logOutUserName {
   display: none;
-} */
+}
 .logOutUserImage {
   display: flex;
   align-items: center;

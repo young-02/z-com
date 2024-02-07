@@ -2,7 +2,7 @@ import style from "./message.module.css";
 import dayjs from "dayjs";
 import "dayjs/locale/ko";
 import relativeTime from "dayjs/plugin/relativeTime";
-import Room from "./_component/Room";
+import Room from "./_componet/Room";
 
 dayjs.locale("ko");
 dayjs.extend(relativeTime);

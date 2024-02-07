@@ -35,7 +35,7 @@ export default function ChatRoom() {
       <div className={style.header}>
         <BackButton />
         <div>
-          <h2>user.nickname</h2>
+          <h2>{user.nickname}</h2>
         </div>
       </div>
       <Link href={user.nickname} className={style.userInfo}>
